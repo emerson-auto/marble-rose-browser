@@ -1,0 +1,15 @@
+QTabWidget {background-color: #000}
+
+QTabBar::close-button { image: url(./images/close-button.svg) } 
+QTabBar {background-color: #800080 ; color: #000 }
+QTabBar::tab:pressed { max-width: 150px}
+QTabBar::tab { max-width: 100px }
+
+QPushButton {background-color: black ; color: grey}
+
+
+QLineEdit {background-color: white ; color: blacks ;  border: 2px solid black ; border-radius: 50% }
+
+QToolBar, QComboBox {background-color: #A3A3A3}
+QToolButton:hover {background-color: #800080 ; border-radius: 90%  }
+QToolButton { color: black ; background-color: white ; border: 0.5px solid black }
