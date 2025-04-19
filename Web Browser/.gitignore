@@ -1,0 +1,10 @@
+__pycache__
+browser.db
+browser.spec
+build
+dist
+installer.log
+pyqt5_test.py
+run.sh
+.*
+
