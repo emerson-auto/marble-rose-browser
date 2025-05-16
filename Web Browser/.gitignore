@@ -1,10 +1,11 @@
-__pycache__
-browser.db
+__pycache__/
+*.db
 browser.spec
-build
-dist
+build/
+dist/
 installer.log
 pyqt5_test.py
 run.sh
 .*
-
+testing/
+ 
