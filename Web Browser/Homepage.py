@@ -6,24 +6,30 @@ from PyQt6.QtGui import *
 import re
 import sqlite3
 import time
+from BookWidget import BookWidget
 
-
-class Homepage(QMainWindow):
-    def __init__(self):
+class SignalEmitter(QObject):
+    click = pyqtSignal(str)
+    
+class Homepage(QWidget):
+    def __init__(self,bookmarks):
         super(Homepage, self).__init__()
-        container = QWidget()
-        container.setObjectName('background')
-        layout = QVBoxLayout()
+        
+        self.bookmarks = bookmarks
+        self.emitter = SignalEmitter()
+        self.click = self.emitter.click
+        
+        self.container = QWidget()
+        self.layout = QVBoxLayout()
         bar = QHBoxLayout()
         logo = QHBoxLayout()
         self.line = QLineEdit()
         title = QLabel('The Browser™')
+        title.setObjectName('title')
         
-        title.setFont(QFont('Times New Roman'))
         title.setMaximumHeight(100)
         
         self.line.setMinimumSize(0,50)
-        self.line.setFont(QFont('Times New Roman'))
         self.line.setPlaceholderText('Search or enter an address')
         
         logo.addStretch(10)
@@ -34,19 +40,35 @@ class Homepage(QMainWindow):
         bar.addWidget(self.line,10)
         bar.addStretch(5)
         
-        layout.addStretch(10)
-        layout.addItem(logo)
-        layout.addStretch(2)
-        layout.addItem(bar)
-        layout.addWidget(QWidget(),10)
-        #layout.addWidget(QWidget,3,2)
-        container.setLayout(layout)
-        self.setCentralWidget(container)
-        self.showMaximized()
+        self.layout.addStretch(10)
+        self.layout.addItem(logo)
+        self.layout.addStretch(2)
+        self.layout.addItem(bar)
+        self.layout.addStretch(2)
+        self.set_bookmarks()
+        self.layout.addStretch(10)
+        
+        
+        
+        self.container.setLayout(self.layout)
+        temp = QHBoxLayout()
+        temp.addWidget(self.container)
+        self.container.setObjectName('homepage')
+        self.setLayout(temp)
         
     def qss(self,qss):
         self.setStyleSheet(qss)
     
+    def url(self):
+        return 'home'
+    
+    def set_bookmarks(self):
+        book_lay = BookWidget(self.bookmarks.get_bookmarks())
+        book_lay.bookmark_clicked.connect(lambda url: self.click.emit(url))
+        bookmarks = QWidget()
+        bookmarks.setLayout(book_lay)
+        bookmarks.setObjectName('BookWidget')
+        self.layout.addWidget(bookmarks)
         
 #MyApp = QApplication(sys.argv)
 #test = Homepage()

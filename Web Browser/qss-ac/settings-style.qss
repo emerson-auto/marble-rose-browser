@@ -1,4 +1,4 @@
-QWidget#background {border-image: url(./images/settings-background-a) }
+QWidget#background {border-image: url(./qss-ac/settings-background) }
 QWidget#menu {background-color: #853085  }
 QWidget#container { background-color: black }
 

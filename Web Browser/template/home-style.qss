@@ -1,0 +1,51 @@
+QWidget#homepage {
+	border-image: $IM1 0 0 0 0 stretch stretch;
+	background-repeat: no-repeat ;
+	}
+QLineEdit {
+	background-color: $C1 ;
+	border: 2px solid $C2 ;
+	border-radius: 10px ;
+	font-size: 25px ;
+	color: $C2 ;
+	}
+QLabel#title {
+	font-size: 80px ;
+	color: $C2 ;
+	background-color: $C1 ;
+	border: 2px solid $C2 ;
+	border-radius: 10px ;
+	}
+QPushButton#bookbutton {
+	text-align: left ;
+	color: $C2 ;
+	max-height: 16px ; 
+	font-size: 15px
+	}
+QLabel#booklabel {
+	color: $C2 ;
+	min-height: 32px ;
+	min-width: 80px
+	}
+QPushButton#bookbutton:hover { 
+	color: $C3
+	}
+QLabel#bookicon {
+	min-height: 32px
+	}
+#bookback {
+	color: $C2 ;
+	
+	background-color: $C1 ;
+	border: 2px solid $C2 ;
+	border-radius: 10px ;
+	min-width: 100px;
+	min-height: 80px;
+	
+	}
+#bookback:hover {
+	background-color: $C3 ;
+	}
+	
+	
+	

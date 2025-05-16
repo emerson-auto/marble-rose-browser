@@ -1,0 +1,6 @@
+QWidget#background {border-image: $IM1 }
+QWidget#menu {background-color: $C1  }
+QWidget#container { background-color: $C2 }
+
+QLabel#title { font-size: 30px ; color: $C3 ; border: 3px solid $C4 ; border-radius: 3% ; background-color: $C5}
+QComboBox#options {font-size: 20px ; color: $C3 ; background-color: $C5 ; border: 2px solid $C4}

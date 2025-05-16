@@ -2,5 +2,5 @@ QWidget#background {border-image: url(./qss-nb/settings-background) 0 0 0 0 stre
 QWidget#menu {background-color: black  }
 QWidget#container { background-color: #9C59D1 }
 
-QLabel#title { font-size: 30px ; color: white ; border: 3px solid #9C59D1 ; border-radius: 3% ; background-color: black}
-QComboBox#options {font-size: 20px ; color: white ; background-color: black ; border: 2px solid #9C59D1}
+QLabel#title { font-size: 30px ; color: white ; border: 3px solid #9C59D1 ; border-radius: 3% ; background-color: black ; font: Unnamed}
+QComboBox#options {font-size: 20px ; color: white ; background-color: black ; border: 2px solid #9C59D1 ; font: 1.2rem "Courier"}

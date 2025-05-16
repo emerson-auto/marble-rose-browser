@@ -1,0 +1,1 @@
+QWidget#homepage {border-image: $IM1 ; background-repeat: no-repeat}

@@ -12,4 +12,5 @@ build/
 __pycache__/
 pyqt5_test.py
 *.sh
-
+*.bak
+*.back
