@@ -1,5 +1,15 @@
 .DS_Store
 
-Html practice
-Advent Of  Code
+Html practice/
+Advent Of  Code/
 .metadata
+English Adaptation/
+*.log
+*.spec
+*.db
+dist/
+build/
+__pycache__/
+pyqt5_test.py
+*.sh
+
